@@ -1,6 +1,6 @@
 # Hybrid E-Commerce Customer Service Chatbot
 
-> **A production-ready intelligent chatbot combining semantic retrieval and fine-tuned LLMs for optimal response quality and latency**
+> **A production-ready intelligent chatbot combining semantic retrieval and fine-tuned LLMs for optimal response quality and latency. Achieves 92.9% overall system score.**
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.8+-red.svg)](https://pytorch.org/)
@@ -86,6 +86,14 @@ Deterministic  Indeterministic
 | **BERTScore F1** | 0.8895 |
 | **BLEU-4** | 0.1442 |
 | **Latency** | **~7000ms** |
+
+### 🏆 Hybrid System Metrics (Weighted)
+| Metric | Score | Notes |
+|--------|-------|-------|
+| **Overall System Score** | **0.9289** | Weighted combination of deterministic success & LLM quality |
+| **Routing Accuracy** | **99.90%** | Logistic Regression Classifier |
+| **Deterministic Success** | **100.00%** | Top-1 Intent Match (39.8% of traffic) |
+| **Indeterministic Quality** | **0.8819** | BERTScore F1 (60.2% of traffic) |
 
 ### System-Level Performance
 - **End-to-end Latency (Deterministic):** ~34ms
